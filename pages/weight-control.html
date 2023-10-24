@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <title>Running.app</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/control.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+</head>
+<body onload="start()">
+    <div class="phone" id="phone">
+        <div class="hidden" id="data1">
+            <div class="header header-padding">
+                <img src="../images/back.png" onclick="history.back()">
+                <a href="../pages/hamburger.html">
+                    <img src="../images/hamburger.png">  
+                </a>
+            </div>
+            
+            <div class="content">
+                <div class="box text">
+                    <div class="top-text weight-600">Waga</div>
+                    <div class="box-middle-info margin-b-10 middle-text weight-600">
+                        <div>
+                            <div>Aktualna</div>
+                            <div>86kg</div>
+                        </div>
+                        <img src="../images/scale-control.png">
+                        <div>
+                            <div>Docelowa</div>
+                            <div>75kg</div>
+                        </div>
+                    </div>
+                    <div class="bottom-text">Jeszcze tylko: 11kg!</div>
+                </div>
+                <div class="box text">
+                    <div class="top-text weight-600">Ostatnia zmiana masy ciała</div>
+                    <div class="box-middle-info margin-b-10 box-weight-change middle-text weight-600">
+                        <div>1,00kg</div>
+                        <img src="../images/arrow-green.png">
+                    </div>
+                    <div class="gray-text">Postęp (18 stycznia 2023)</div>
+                </div>
+                <div class="button medium-button">
+                    <div class="text button-text" onclick="change_content('data2', 2, false, true)">Dodaj wagę</div>
+                </div>
+                <div class="box text">
+                    <div class="top-text weight-600">Ostatnie ważenia</div>
+                    <div class="box-middle-info middle-text weight-600">
+                        <div class="gray-text">21.01.2023</div>
+                        <div class="icon-box">
+                            <img src="../images/scale-white.png">
+                            <div class="padding-l-5">86kg</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-middle-info middle-text weight-600">
+                        <div class="gray-text">18.01.2023</div>
+                        <div class="icon-box">
+                            <img src="../images/scale-white.png">
+                            <div class="padding-l-5">87kg</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-middle-info middle-text weight-600">
+                        <div class="gray-text">13.01.2023</div>
+                        <div class="icon-box">
+                            <img src="../images/scale-white.png">
+                            <div class="padding-l-5">87kg</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-middle-info middle-text weight-600">
+                        <div class="gray-text">09.01.2023</div>
+                        <div class="icon-box">
+                            <img src="../images/scale-white.png">
+                            <div class="padding-l-5">87kg</div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="box-middle-info middle-text weight-600">
+                        <div class="gray-text">06.01.2023</div>
+                        <div class="icon-box">
+                            <img src="../images/scale-white.png">
+                            <div class="padding-l-5">88kg</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" id="data2">
+            <div class="header header-padding">
+                <img src="../images/back.png" class="back-button" onclick="change_content('data1', 2, false, true)">
+            </div>
+
+            <div class="profile-container">
+                <div class="text big-text goal-top-text font-30">Nowa waga</div>
+                <div class="goal-box">
+                    <input class="text digit-input" type="number">
+                    <div class="text goal-text">kg</div>
+                </div>
+                <div class="button medium-button button-margin">
+                    <div class="text button-text" onclick="change_content('data1', 2, false, true)">Dodaj wagę</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_content"></div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

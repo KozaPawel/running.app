@@ -1,0 +1,40 @@
+.phone {
+    align-items: center;
+    align-content: flex-start;
+    background: rgb(11,11,18);
+    background: linear-gradient(0deg, rgba(11,11,18,1) 50%, rgba(217,217,217,0) 100%) !important;
+}
+.header {
+    padding-left: 40px;
+}
+.image{
+    height:418px;
+    width:auto;
+    object-position: -125px ;
+}
+.image-forgot-password {
+    height:418px;
+    width:auto;
+}
+.image-container {
+    z-index:-1;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.button-placeholder-text {
+    font-weight: 500;
+    color: #d4d4d4;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+    text-align: left !important;
+    width: 254px !important;
+}
+input {
+    border: none;
+}
+input:focus {
+    outline: none;
+}
+::placeholder {
+    color: #d4d4d4;
+}

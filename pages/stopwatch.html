@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Running.app</title>
+    <link rel="stylesheet" href="../css/stopwatch.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+</head>
+<body onload="start()">
+    <div class="phone" id="phone">
+        <div class="content text">
+            <div class="description-text">Nazwa ćwiczenia</div>
+            <div class="middle-box">
+                <div class="middle-text-top">0,00</div>
+                <div class="middle-text-bottom">km</div>
+            </div>
+            <div class="bottom-box">
+                <div>
+                    <div class="bottom-text">00:00:00</div>
+                    <div class="description-text">czas</div>
+                </div>
+                <div>
+                    <div class="bottom-text">00'00"</div>
+                    <div class="description-text">tempo</div>
+                </div>
+            </div>
+            <div id="page_content"></div>
+            
+            <div class="hidden" id="data1">
+                <div>
+                    <img src="../images/pause.png" onclick="change_content('data2', 2, false, false)"> 
+                </div>
+            </div>
+            
+            <div class="hidden" id="data2">
+                <div class="buttons-box">
+                    <img src="../images/play.png" onclick="change_content('data1', 2, false, false)">
+                    <a href="condition-control.html">
+                        <img src="../images/stop.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

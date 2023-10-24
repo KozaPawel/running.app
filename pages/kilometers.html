@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+    <title>Running.app</title>
+    <link rel="stylesheet" href="../css/chart.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+</head>
+<body>
+    <div class="phone" id="phone">
+        <div class="header header-width header-padding">
+            <img src="../images/back.png" onclick="history.back()">
+            <a href="../pages/hamburger.html">
+                <img src="../images/hamburger.png">  
+            </a>
+        </div>
+        <div class="text page-info">Przebiegnięte kilometry</div>
+        <div id="my-chart" class="kilometers-chart-gradient daily-kilometers">
+            <table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes data-spacing-1 text">
+                <caption> Dziś </caption>
+                <caption id="sub-caption"></caption>
+                <tr>
+                    <th scope="row">1</th>
+                    <td style="--size: 0.2"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.2"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.5"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.1"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.1"></td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.2"></td>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.8"></td>
+                </tr>
+                <tr>
+                    <th scope="row">16</th>
+                    <td style="--size: 0.9"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.2"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.2"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <th scope="row">20</th>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0.3"></td>
+                </tr>
+                <tr>
+                    <td style="--size: 0"></td>
+                </tr>
+                <tr>
+                    <th scope="row">24</th>
+                    <td style="--size: 0"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="my-chart" class="kilometers-chart-gradient">
+            <table class="charts-css column show-heading show-labels show-primary-axis show-4-secondary-axes data-spacing-3 text">
+                <caption> W tym tygodniu </caption>
+                <caption id="sub-caption"></caption>
+                <tr>
+                    <th scope="row">pon</th>
+                    <td style="--size: 0.3"> 10 </td>
+                </tr>
+                <tr>
+                    <th scope="row">wto</th>
+                    <td style="--size: 0.18"> 7 </td>
+                </tr>
+                <tr>
+                    <th scope="row">śro</th>
+                    <td style="--size: 0.2"> 7,5 </td>
+                </tr>
+                <tr>
+                    <th scope="row">czw</th>
+                    <td style="--size: 0.0"> </td>
+                </tr>
+                <tr>
+                    <th scope="row">pią</th>
+                    <td style="--size: 0.25"> 9 </td>
+                </tr>
+                <tr>
+                    <th scope="row">sob</th>
+                    <td style="--size: 0.63"> 22 </td>
+                </tr>
+                <tr>
+                    <th scope="row">nie</th>
+                    <td style="--size: 0.35"> 14 </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="my-chart" class="kilometers-chart-gradient">
+            <table class="charts-css area show-heading show-labels show-data-axes show-primary-axis show-8-secondary-axes text">
+                    <caption> Miesięcznie </caption>
+                    <caption id="sub-caption"> Styczeń </caption>
+                <tr>
+                    <th scope="row">6<th></th>
+                    <td style="--start: 0; --end: 0.15;"> 5 </td>
+                </tr>
+                <tr>
+                    <th scope="row">12<th></th>
+                    <td style="--start: 0.15; --end: 0.08;"> 3 </td>
+                </tr>
+                <tr>
+                    <th scope="row">18<th></th>
+                    <td style="--start: 0.08; --end: 0.38;"> 15 </td>
+                </tr>
+                <tr>
+                    <th scope="row">24<th></th>
+                    <td style="--start: 0.38; --end: 0.44;"> 18 </td>
+                </tr>
+                <tr>
+                    <th scope="row">30<th></th>
+                    <td style="--start: 0.44; --end: 0.15;"> 5 </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

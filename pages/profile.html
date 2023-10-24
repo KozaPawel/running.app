@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <title>Running.app</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body onload="start()">
+    <div class="phone" id="phone">
+
+        <div class="hidden" id="data1">
+            <div class="header header-padding">
+                <img src="../images/back.png" onclick="history.back()">
+                <a href="../pages/hamburger.html">
+                    <img src="../images/hamburger.png">  
+                </a>
+            </div>
+            <div class="container">
+                <div class="profile-container">
+                    <img src="../images/profile.jpg" class="profile-pic">
+                    <div class="info-container">
+                        <div class="text big-text">
+                            Jan Kowalski
+                        </div>
+                    </div>
+                </div>
+                <div class="info-boxes-container">
+                    <div class="text box user-info-box">
+                        <div class="user-info-top-text">24</div>
+                        <div class="user-info-bottom-text">Wiek</div>
+                    </div>
+                    <div class="text box user-info-box">
+                        <div class="user-info-top-text">86kg</div>
+                        <div class="user-info-bottom-text">Waga</div>
+                    </div>
+                    <div class="text box user-info-box">
+                        <div class="user-info-top-text">183cm</div>
+                        <div class="user-info-bottom-text">Wzrost</div>
+                    </div>
+                </div>
+                <div class="box text boxes-container">
+                    <div class="user-info-top-text">Ustaw swój cel</div>
+                    <div class="text choose-box">
+                        <div class="description-text">Docelowa waga</div>
+                        <div class="interact-box">
+                            <div class="interact-text" onclick="change_content('data2', 3, false, true)">75</div>
+                            <div>kg</div>
+                        </div>
+                    </div>
+                    <div class="text choose-box">
+                        <div class="description-text">Docelowa aktywność</div>
+                        <div class="interact-box">
+                            <div class="interact-text" onclick="change_content('data3', 3, false, true)">5</div>
+                            <div>km</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box text boxes-container">
+                    <div class="user-info-top-text">Aktualna aktywność</div>
+                    <div class="text choose-box">
+                        <div class="description-text">Brak</div>
+                        <input type="radio" name="activity">
+                    </div>
+                    <div class="text choose-box">
+                        <div class="description-text">Raz w tygodniu</div>
+                        <input type="radio" name="activity">
+                    </div>
+                    <div class="text choose-box">
+                        <div class="description-text">Dwa razy w tygodniu</div>
+                        <input type="radio" name="activity" checked>
+                    </div>
+                    <div class="text choose-box">
+                        <div class="description-text">Kilka razy w tygodniu</div>
+                        <input type="radio" name="activity">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="hidden" id="data2">
+            <div class="header header-padding">
+                <img src="../images/back.png" class="back-button" onclick="change_content('data1', 3, false, true)">
+            </div>
+
+            <div class="profile-container">
+                <div class="text big-text goal-top-text">Ustaw docelową wagę</div>
+                <div class="goal-box">
+                    <input class="text digit-input" type="number">
+                    <div class="text goal-text">kg</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" id="data3">
+            <div class="header header-padding">
+                <img src="../images/back.png" class="back-button" onclick="change_content('data1', 3, false, true)">
+            </div>
+
+            <div class="profile-container">
+                <div class="text big-text goal-top-text">Ustaw docelową aktywność</div>
+                <div class="goal-box">
+                    <input class="text digit-input" type="number">
+                    <div class="text unit-text">km</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_content"></div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

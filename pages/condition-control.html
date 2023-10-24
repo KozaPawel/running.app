@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<head>
+    <title>Running.app</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/control.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+</head>
+<body onload="start()">
+    <div class="phone" id="phone">
+        <div class="hidden" id="data1">
+            <div class="header header-padding">
+                <img src="../images/back.png" onclick="history.back()">
+                <a href="../pages/hamburger.html">
+                    <img src="../images/hamburger.png">  
+                </a>
+            </div>
+            
+            <div class="content">
+                <div class="box text">
+                    <div class="top-text weight-600">Kilometry</div>
+                    <div class="box-middle-info margin-b-10 middle-text weight-600">
+                        <div>
+                            <div>Aktualne</div>
+                            <div>0km</div>
+                        </div>
+                        <img src="../images/condition-control.png">
+                        <div>
+                            <div>Docelowe</div>
+                            <div>5km</div>
+                        </div>
+                    </div>
+                    <div class="bottom-text">Jeszcze tylko: 5kg!</div>
+                </div>
+                <div class="box text">
+                    <div class="top-text weight-600">Nowe ćwiczenie</div>
+                    <select class="button text">
+                        <option>Wybierz ćwiczenie</option>
+                        <option>Bieg swobodny</option>
+                        <option>Bieg po górach</option>
+                        <option>Bieg po bieżni</option>
+                    </select>
+                    <a href="stopwatch.html">
+                        <div class="button margin-t-10">
+                            <div class="text button-text">Rozpocznij ćwiczenie</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="box text">
+                    <div class="top-text weight-600">Ostatnie ćwiczenia</div>
+
+                    <div class="box-middle-info activity-box middle-text weight-600 line">
+                        <div class="activity-info-box margin-b-5">
+                            <div class="gray-text">17.01.2023</div>
+                            <div class="text">Bieg po górach</div>
+                        </div>
+                        <div class="activity-info-box">
+                            <div class="icon-box">
+                                <img src="../images/map-target.png">
+                                <div class="padding-l-5 gray-text">2,6km</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/calories-white.png">
+                                <div class="padding-l-5 gray-text">456</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/clock.png">
+                                <div class="padding-l-5 gray-text">00:26:38</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-middle-info activity-box middle-text weight-600 line">
+                        <div class="activity-info-box margin-b-5">
+                            <div class="gray-text">17.01.2023</div>
+                            <div class="text">Bieg swobodny</div>
+                        </div>
+                        <div class="activity-info-box">
+                            <div class="icon-box">
+                                <img src="../images/map-target.png">
+                                <div class="padding-l-5 gray-text">2,4km</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/calories-white.png">
+                                <div class="padding-l-5 gray-text">218</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/clock.png">
+                                <div class="padding-l-5 gray-text">00:48:58</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-middle-info activity-box middle-text weight-600 line">
+                        <div class="activity-info-box margin-b-5">
+                            <div class="gray-text">18.01.2023</div>
+                            <div class="text">Bieg swobodny</div>
+                        </div>
+                        <div class="activity-info-box">
+                            <div class="icon-box">
+                                <img src="../images/map-target.png">
+                                <div class="padding-l-5 gray-text">5km</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/calories-white.png">
+                                <div class="padding-l-5 gray-text">358</div>
+                            </div>
+                            <div class="icon-box">
+                                <img src="../images/clock.png">
+                                <div class="padding-l-5 gray-text">00:34:05</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text margin-t-10 pointer" onclick="change_content('data2', 2, false, false)">Zobacz więcej</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" id="data2">
+            <div class="header header-padding">
+                <img src="../images/back.png" onclick="change_content('data1', 2, false, false)">
+                <a href="../pages/hamburger.html">
+                    <img src="../images/hamburger.png">  
+                </a>
+            </div>
+            
+            <div class="content">
+                <div class="box text box-scroll-height">
+                    <div class="top-text weight-600 margin-b-10">Wszystkie ćwiczenia</div>
+
+                    <div class="box-scroll">
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">17.01.2023</div>
+                                <div class="text">Bieg po górach</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">2,6km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">456</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:26:38</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">17.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">2,4km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">218</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:48:58</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="box-middle-info activity-box middle-text weight-600 line">
+                            <div class="activity-info-box margin-b-5">
+                                <div class="gray-text">18.01.2023</div>
+                                <div class="text">Bieg swobodny</div>
+                            </div>
+                            <div class="activity-info-box">
+                                <div class="icon-box">
+                                    <img src="../images/map-target.png">
+                                    <div class="padding-l-5 gray-text">5km</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/calories-white.png">
+                                    <div class="padding-l-5 gray-text">358</div>
+                                </div>
+                                <div class="icon-box">
+                                    <img src="../images/clock.png">
+                                    <div class="padding-l-5 gray-text">00:34:05</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page_content"></div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

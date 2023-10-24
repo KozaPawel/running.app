@@ -1,0 +1,87 @@
+.phone {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.phone::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+    height: 0px;
+}
+.header {
+    padding-bottom: 32px !important;
+}
+.page-info {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 34px;
+
+}
+#my-chart {
+    width: 100%;
+    margin: 0px;
+    background-color: #181829;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+.weight-chart-gradient-top {
+    --color: linear-gradient(to top, rgb(98, 137, 195, 0.6) 0%,rgb(42, 108, 206, 0.6) 40%);
+}
+.weight-chart-gradient-right {
+    --color: linear-gradient(to right, rgb(98, 137, 195, 0.6) 0%,rgb(42, 108, 206, 0.6) 40%);
+}
+.kilometers-chart-gradient {
+    --color: linear-gradient(to top, rgb(243, 213, 57, 0.6) 0%,rgb(255, 179, 15, 0.6) 40%);
+}
+.pulse-chart-gradient {
+    --color: linear-gradient(to top, rgb(222, 138, 138, 0.6) 0%,rgb(255, 0, 0, 0.6) 40%);
+}
+.elevation-chart-gradient {
+    --color: linear-gradient(to top, rgb(42, 182, 39, 0.6) 0%, rgb(25, 135, 22, 0.6) 40%);
+}
+.calories-chart-gradient {
+    --color: linear-gradient(to top, rgb(255, 179, 15, 0.6) 0%,rgb(244, 96, 54, 0.6) 40%);
+}
+#sub-caption {
+    padding-bottom: 10px !important;
+    font-size: 14px;
+    color: #d4d4d4;
+}
+.charts-css {
+    --data-axes-color: #ffffff !important;
+    --data-axes-style: dashed !important;
+    --data-axes-width: 1px !important;
+    --secondary-axes-color: #2f2f2f !important;
+}
+.text {
+    font-size: 16px;
+    font-weight: 600;
+}
+.column td {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.area tr:nth-child(1) {
+    border-left-width: 0px !important;
+}
+.area tr:nth-child(5) {
+    border-right-width: 0px !important;
+}
+.bar td {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+caption {
+    font-size: 18px;
+}
+canvas {
+    color: white;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.daily-kilometers th {
+    font-size: 11px;
+}

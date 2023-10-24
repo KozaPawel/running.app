@@ -1,0 +1,172 @@
+.phone {
+    background-color: #0b0b12;
+    align-content: flex-start;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.info-container {
+    margin-left: 20px;
+    text-align: left;
+}
+.text-top {
+    font-size: 14px;
+    font-weight: 500;
+}
+.text-bottom {
+    font-size: 18px;
+    font-weight: 600;
+}
+.big-image {
+    min-width: 274px;
+    min-height: 140px;
+    border-radius: 14px;
+    background-size: 300px;
+    position: absolute;
+    overflow: hidden;
+}
+.image-weight {
+    background-image: url("../images/scale-home.jpg");
+    mask-image: linear-gradient(to left, rgba(217,217,217,0.5) 20%,rgba(11,11,18,1) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(217,217,217,0.5) 20%,rgba(11,11,18,1) 100%);
+}
+.image-condition {
+    background-image: url("../images/runners-condition.jpg");
+    mask-image: linear-gradient(to right, rgba(217,217,217,0.5) 20%,rgba(11,11,18,1) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(217,217,217,0.5) 20%,rgba(11,11,18,1) 100%);
+    object-position: -30px;
+}
+.large-box {
+    width: 274px;
+    height: 140px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.image-text {
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-container-right {
+    align-items: flex-end;
+}
+.text-container-left {
+    align-items: flex-start;
+}
+.image-condition-text {
+    position: absolute;
+    top: 380px;
+    padding-left: 4px;
+    text-align: left;
+}
+.box {
+    background-color: #181829;
+    border-radius: 14px;
+}
+.medium-box {
+    width: 127px;
+    height: 135px;
+}
+.box-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 4px;
+}
+.medium-box-middle {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 14px;
+}
+.circle-container {
+    margin-top: 4px !important;
+}
+.medium-box-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.weight-arrow {
+    position: absolute;
+    top: 555px;
+    z-index: 1;
+}
+.half-circle {
+    width: 70px;
+    height: 40px;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border: 10px solid transparent;
+    background: linear-gradient(#181829, #181829) padding-box,
+              linear-gradient(to right, #6289c3, #2a6cce) border-box;
+    border-bottom: 0;
+}
+.circle {
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(#181829, #181829) padding-box,
+              linear-gradient(to right, #ffb30f, #f3d539) border-box;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+.medium-boxes-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 80%;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.small-box {
+    width: 127px;
+    height: 70px;
+}
+.small-box-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 12px;
+}
+.small-boxes-container {
+    overflow: auto;
+    white-space: nowrap;
+    width: 75%;
+    padding-bottom: 10px;
+}
+.small-boxes-container a {
+    display: inline-block;
+    padding-right: 20px;
+}
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #12121f;
+}  
+::-webkit-scrollbar-thumb {
+    background: #252541;
+}
